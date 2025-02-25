@@ -40,34 +40,30 @@ const App = () => {
                 </p>
             </div>
 
-            <div className="bgimg-2">
             <section id="features" className="features-container">
             <div className="features-container">
-    <h2 className="features-title">Our Features</h2>
-    <div className="features-grid">
-        <div className="feature-card">
-            <h3>Real-Time Energy Tracking</h3>
-            <p>Monitor and optimize your energy usage.</p>
-        </div>
-        <div className="feature-card">
-            <h3>User-Friendly Interface</h3>
-            <p>Easy-to-use platform with intuitive controls.</p>
-        </div>
-        <div className="feature-card">
-            <h3>Cost-Saving</h3>
-            <p>Reduce your electricity bills with smart insights.</p>
-        </div>
-        <div className="feature-card">
-            <h3>Smart Automation</h3>
-            <p>Automate your home for efficiency.</p>
-        </div>
-    </div>
-</div>
-</section>
+                        <h2 className="features-title">Our Features</h2>
+                        <div className="features-grid">
+                            <div className="feature-card">
+                                <h3>Real-Time Energy Tracking</h3>
+                                <p>Monitor and optimize your energy usage.</p>
+                            </div>
+                            <div className="feature-card">
+                                <h3>User-Friendly Interface</h3>
+                                <p>Easy-to-use platform with intuitive controls.</p>
+                            </div>
+                            <div className="feature-card">
+                                <h3>Cost-Saving</h3>
+                                <p>Reduce your electricity bills with smart insights.</p>
+                            </div>
+                            <div className="feature-card">
+                                <h3>Smart Automation</h3>
+                                <p>Automate your home for efficiency.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-            </div>
-
-            <div className="bgimg-3">
             <section id="newsletter" className="newsletter-section">
                 <div className="glass-box newsletter-box">
                     <h2>Stay upated with the latest news! Join Our Newsletter Now!</h2>
@@ -78,7 +74,6 @@ const App = () => {
                     </div>
                 </div>
             </section>
-            </div>
 
             <section id="contact" className="footer-section">
                 <footer className="footer">

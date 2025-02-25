@@ -1,0 +1,152 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-size: cover;
+    color: black;
+    overflow-x: hidden;
+}
+
+/* Responsive Glassmorphic Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    padding: 10px 20px;
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+}
+
+/* Parallax Backgrounds */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+.bgimg-1 {
+    background-image: url('/src/bg1.jpg');
+    min-height: 100vh;
+}
+
+
+
+
+
+
+
+
+/* Section Styling */
+.section {
+    padding: 80px 10%;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 1000px;
+}
+
+.section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Features Section */
+.features-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+/* Newsletter Section */
+.newsletter-box {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.input-field {
+    width: 70%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.subscribe-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff5722;
+    color: white;
+    cursor: pointer;
+}
+
+.footer {
+    background: #222;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Responsive Fix */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+}

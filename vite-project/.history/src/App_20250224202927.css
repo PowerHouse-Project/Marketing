@@ -1,0 +1,95 @@
+/* General Styles */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    color: #fff;
+    text-align: center;
+  }
+  
+  /* Navbar */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+  }
+  
+  .nav-links button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    margin: 0 15px;
+    cursor: pointer;
+  }
+  
+  /* Parallax Sections */
+  .parallax {
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+  }
+  
+  .bgimg-1 {
+    background-image: url('/src/img_parallax.jpg');
+    height: 100vh;
+  }
+  
+  .bgimg-2 {
+    background-image: url('/src/img_parallax2.jpg');
+    height: 400px;
+  }
+  
+  .bgimg-3 {
+    background-image: url('/src/img_parallax3.jpg');
+    height: 400px;
+  }
+  
+  /* Glassmorphism Effects */
+  .glass-box {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+  }
+  
+  /* Full-width Black Sections */
+  .section {
+    background: #000;
+    width: 100%;
+    padding: 80px 20px;
+  }
+  
+  /* Center Content */
+  .center-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Footer */
+  .footer {
+    background: #000;
+    padding: 40px;
+  }
+  
+  /* Responsive Fix */
+  @media only screen and (max-device-width: 1024px) {
+    .parallax {
+      background-attachment: scroll;
+    }
+  }
+  

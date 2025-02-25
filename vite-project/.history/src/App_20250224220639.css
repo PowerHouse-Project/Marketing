@@ -1,0 +1,11 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(/src/bg1.jpg);
+    background-size: cover;
+    color: black;
+    overflow-x: hidden;
+}
+
+/* Responsive Navbar */

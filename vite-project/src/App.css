@@ -1,15 +1,118 @@
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('/fonts/JetBrainsMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('/fonts/JetBrainsMono-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('/fonts/JetBrainsMono-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+
 /* ===== Global Styles (Dark Mode & Glassmorphism) ===== */
 body {
     margin: 0;
     padding: 0;
-    font-family: 'JetBrains Mono';
-    src:local('JetBrains Mono'), url('/src/fonts/JetBrainsMono-Regular.ttf');
+    font-family: 'JetBrains Mono', monospace !important;
     background: #121212; /* Dark background */
+    font-family: 'JetBrains Mono', monospace;
     color: #e0e0e0; /* Light text for contrast */
     overflow-x: hidden;
 }
 
-/* ====== Responsive Design for Tablets and Phones ====== */
+/* ===== Navbar ===== */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    padding: 12px 24px;
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #bb86fc;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links button {
+    background: transparent;
+    border: none;
+    color: #bb86fc; /* Purple accent */
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.nav-links button:hover {
+    color: #ffffff; /* Bright white hover */
+}
+
+/* Mobile Navbar */
+.menu-button {
+    display: none;
+    background: transparent;
+    border: none;
+    color: #bb86fc;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-button {
+        display: block;
+    }
+}
+
+.top-right-text {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #bb86fc; /* Purple accent */
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* ===== Responsive Design for Tablets and Phones ====== */
 @media (max-width: 1024px) {
     .features-grid {
         flex-direction: column;
@@ -25,37 +128,17 @@ body {
     h1 {
         font-size: 2rem; /* Reduce heading size */
     }
-
-    .features-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .feature-card {
-        width: 100%; /* Full width on small devices */
-        max-width: 350px; /* Prevent excessive stretching */
-    }
 }
 
-@media (max-width: 480px) {
-    h1 {
-        font-size: 1.8rem; /* Even smaller heading for phones */
-    }
-
-    .feature-card {
-        width: 95%;
-        padding: 15px; /* Less padding for small screens */
-    }
-}
-
-/* ===== Navbar ===== */
+/* ===== Responsive Navbar ===== */
 .navbar {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(15px);
     padding: 12px 24px;
@@ -63,10 +146,22 @@ body {
     z-index: 1000;
 }
 
+.menu-toggle {
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    color: #bb86fc;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
 .nav-links button {
     background: transparent;
     border: none;
-    color: #bb86fc; /* Purple accent */
+    color: white;
     font-size: 18px;
     cursor: pointer;
     padding: 10px;
@@ -74,7 +169,34 @@ body {
 }
 
 .nav-links button:hover {
-    color: #ffffff; /* Bright white hover */
+    color: #bb86fc;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        text-align: center;
+        gap: 10px;
+        padding: 20px 0;
+        border-radius: 0 0 10px 10px;
+        transform: translateY(-200%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .nav-links.open {
+        transform: translateY(0);
+    }
 }
 
 /* ===== Features Section ===== */
